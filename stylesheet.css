@@ -1,5 +1,42 @@
+* {
+    font-family: "Oswald", sans-serif;
+}
+
 body {
     position: relative;
+    margin: 0;
+}
+
+h1 {
+    padding:0 1em;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius:50%;
+    padding: auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    padding: 1em;
+}
+
+.card {
+    display: flex;
+    padding: 0 0 0 1em;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.text-container {
+    padding: 1em;
 }
 
 .overlay {
@@ -24,9 +61,12 @@ body {
 
 .modal-close {
     position: absolute;
+    background-color: white;
     right: 15px;
     top: 5px;
     cursor: pointer;
+    border-style: none;
+    border-radius: 50%;
 }
 
 .hidden {
