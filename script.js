@@ -38,8 +38,8 @@ gridContainer.innerHTML = employeeHTML;
 
 function displayModal(index) {
     
-        let { name, dob, phone, email, location: { city, street, state, postcode
-    }, picture } = employees[index];
+        let { name, dob, phone, email, location: 
+            { city, street, state, postcode}, picture } = employees[index];
         let date = new Date(dob.date);
     const modalHTML = `
         <img class="avatar" src="${picture.large}" />
@@ -49,7 +49,7 @@ function displayModal(index) {
         <p class="address">${city}</p>
         <hr />
         <p>${phone}</p>
-        <p class="address">${street}, ${state} ${postcode}</p>
+        <p class="address">${street.number} ${street.name} ${city}, ${state} ${postcode}</p>
         <p>Birthday:
         ${date.getMonth()}/${date.getDate()}/${date.getFullYear()}</p>
     </div>
